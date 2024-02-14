@@ -1,0 +1,25 @@
+.benefit{
+
+  p{
+    margin-bottom: 14px;
+    font-size: 16px;
+    opacity: 0.8;
+    line-height: 1.85;
+  }
+  a{
+    color: var(--acent);
+    font-weight: 500;
+    line-height: 1.85;
+    text-decoration: none;
+    
+    &::after{
+      content: url("/icons/arrow-right.png");
+    }
+  }
+}
+
+.benefit__title{
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+}

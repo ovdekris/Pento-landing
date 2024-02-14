@@ -1,0 +1,47 @@
+.info-hint{
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding-top: 12px;
+  width: 112px;
+  height: 56px;
+  background-image: url("/icons/hint-bg.svg");
+}
+
+.input-hint__radio{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.input-hint__radio:checked + .input-hint__radio-fake{
+  background-image: url("/icons/done-slider.svg");
+  background-size: contain;
+}
+.input-hint__radio-fake{
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid var(--header-text-color);
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+
+  &--orange{
+    background-color: var(--ui-orange-color);
+  }
+  &--turquoise{
+    background-color: var(--ui-turquoise-color);
+  }
+  &--gray{
+    background-color: var(--ui-gray-color);
+  }
+}
