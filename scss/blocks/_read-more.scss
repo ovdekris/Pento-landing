@@ -1,0 +1,17 @@
+.read-more{
+  display: inline-flex;
+  gap: 13px;
+  align-items: center;
+  color: var(--acent);
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  &::after{
+    content: url("/icons/arrow-right.png");
+    height: 24px;
+  }
+
+  &--large{
+     font-size: 18px;
+  }
+}

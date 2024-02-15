@@ -6,16 +6,6 @@
     opacity: 0.8;
     line-height: 1.85;
   }
-  a{
-    color: var(--acent);
-    font-weight: 500;
-    line-height: 1.85;
-    text-decoration: none;
-    
-    &::after{
-      content: url("/icons/arrow-right.png");
-    }
-  }
 }
 
 .benefit__title{
