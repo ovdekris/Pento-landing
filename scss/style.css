@@ -67,6 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --footer-bg-color: #2D2F33;
   --product-bg-color: #F7F7F7;
   --tab-controls-bg: #EEEEEE;
+  --slider-bg-color: #FAFAFA;
   --font-main: "Gilroy", sans-serif;
   --font-cards: "Inter", sans-serif;
   --font-footer: "Inter", sans-serif;
@@ -404,6 +405,8 @@ body {
 
 .products__slider {
   margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .products__link {
@@ -454,6 +457,26 @@ body {
 }
 .tab-controls__btn--active {
   background-color: var(--header-text-color);
+}
+
+.card {
+  width: 268px;
+}
+
+.card__photo {
+  height: 240px;
+  background-color: var(--slider-bg-color);
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+.card__img {
+  margin-top: -50px;
+}
+
+.card__description {
+  background-color: var(--slider-bg-color);
+  border-radius: 0 0 20px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
