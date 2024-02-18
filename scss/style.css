@@ -460,11 +460,21 @@ body {
 }
 
 .card {
+  position: relative;
   width: 268px;
   font-family: var(--font-cards);
 }
 
+.card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .card__photo {
+  margin-top: 50px;
   height: 240px;
   background-color: var(--slider-bg-color);
   border-radius: 20px 20px 0 0;
@@ -509,6 +519,66 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.card__price {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--ui-product-accent-color);
+}
+.card__price::before {
+  content: attr(data-value);
+  font-size: 15px;
+}
+
+.card__btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--ui-product-accent-color);
+  transition: opacity 0.2s ease-in;
+}
+.card__btn:hover {
+  opacity: 0.8;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  gap: 42px;
+}
+
+.slider__btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--header-text-color);
+  border-radius: 50%;
+  box-shadow: 0 7px 19px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.slider__btn--prev {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.slider__btn--next {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */

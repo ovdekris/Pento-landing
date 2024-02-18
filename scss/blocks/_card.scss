@@ -1,9 +1,18 @@
 .card{
+  position: relative;
   width: 268px;
   font-family: var(--font-cards);
-}
 
+}
+.card__link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .card__photo{
+  margin-top: 50px;
   height: 240px;
   background-color: var(--slider-bg-color);
   border-radius: 20px 20px 0 0;
@@ -51,9 +60,32 @@
 }
 
 .card__price{
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--ui-product-accent-color);
 
+  &::before{
+    content: attr(data-value);
+    font-size: 15px;
+  }
 }
 
 .card__btn{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--ui-product-accent-color);
+  transition: opacity 0.2s ease-in;
 
+  &:hover{
+    opacity: 0.8;
+  }
 }
