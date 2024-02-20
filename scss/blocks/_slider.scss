@@ -1,7 +1,5 @@
 .slider{
   position: relative;
-  display: flex;
-  gap: 42px;
 }
 
 .slider__btn{
@@ -18,12 +16,16 @@
 }
 
 .slider__btn--prev{
+  cursor: pointer;
+  z-index: 2;
   left: 0;
   top: 50%;
   transform: translate(-50%,50%);
 }
 
 .slider__btn--next{
+  cursor: pointer;
+  z-index: 2;
   right: 0;
   top: 50%;
   transform: translate(50%,-50%);

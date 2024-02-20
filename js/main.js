@@ -26,3 +26,13 @@ for(let hint of infoHints){
     })
 }
 
+
+///Swiper
+const swiper = new Swiper('.swiper', {
+    slidesPerView:4,
+    spaceBetween: 42,
+    navigation: {
+        nextEl: '#sliderNext',
+        prevEl: '#sliderPrev',
+    }
+});
