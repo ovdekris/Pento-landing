@@ -29,8 +29,24 @@ for(let hint of infoHints){
 
 ///Swiper
 const swiper = new Swiper('.swiper', {
+    freeMode: true,
+    loop: true,
     slidesPerView:4,
     spaceBetween: 42,
+    // breakpoints:{
+    //     640:{
+    //         slidesPerView: 2,
+    //         spaceBetween: 20,
+    //     },
+    //     768:{
+    //         slidesPerView: 2,
+    //         spaceBetween: 20,
+    //     },
+    //     1024:{
+    //         slidesPerView: 2,
+    //         spaceBetween: 20,
+    //     },
+    // },
     navigation: {
         nextEl: '#sliderNext',
         prevEl: '#sliderPrev',
