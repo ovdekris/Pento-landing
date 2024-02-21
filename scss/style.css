@@ -220,6 +220,7 @@ body {
 
 .search-form {
   display: flex;
+  gap: 10px;
   max-width: 344px;
   height: 56px;
   padding: 8px 8px 8px 20px;
@@ -238,6 +239,7 @@ body {
   line-height: 150%;
   background: rgba(255, 255, 255, 0);
   border: none;
+  flex-grow: 1;
 }
 .search-form__input::placeholder {
   font-weight: 400;
@@ -249,6 +251,7 @@ body {
 }
 
 .search-form__btn {
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
   border-radius: 24px;
