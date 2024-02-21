@@ -187,14 +187,6 @@ body {
   gap: 20px;
 }
 
-.logo {
-  align-self: center;
-  letter-spacing: 0.28px;
-  font-weight: 700;
-  font-size: 20px;
-  text-transform: capitalize;
-}
-
 .nav-list {
   display: flex;
   justify-content: center;
@@ -589,6 +581,53 @@ body {
   padding: 118px 0 56px;
   background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
+}
+.footer a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+.footer__grid {
+  margin-bottom: 118px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr 2fr 2fr;
+  gap: 20px;
+}
+
+.footer__nav-services {
+  grid-column-start: 3;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__description {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.footer__description p + p {
+  margin-top: 1em;
+}
+
+.footer__links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__logo {
+  margin-bottom: 29px;
+}
+
+.logo {
+  align-self: center;
+  letter-spacing: 0.28px;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */
