@@ -52,3 +52,18 @@ const swiper = new Swiper('.swiper', {
         prevEl: '#sliderPrev',
     }
 });
+
+///Tabs
+const tabsBtns=document.querySelectorAll("[data-tab]");
+const tabsProducts=document.querySelectorAll("[data-tab-value]");
+
+for (let btn of tabsBtns){
+    btn.addEventListener("click",function(){
+        for (let btn of tabsBtns){
+            btn.classList.remove("tab-controls__btn-active");
+        }
+        this.classList.add("tab-controls__btn-active");
+        
+        
+    })
+}
