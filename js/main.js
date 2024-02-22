@@ -64,6 +64,21 @@ for (let btn of tabsBtns){
         }
         this.classList.add("tab-controls__btn-active");
         
-        
+        //Display products that we need and hide products we don't need
+        for (let product of tabsProducts){
+            //Check for tab all
+            if (this.dataset.tab==='all'){
+                product.classList.remove("none")
+            }
+            else {
+                if (product.dataset.tabValue===this.dataset.tab){
+                    product.classList.remove("none")
+                }else {
+                    product.classList.add("none")
+                }
+            }
+        }
+        //Update swiper for truth initialization
+        swiper.update();
     })
 }
