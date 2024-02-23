@@ -198,6 +198,26 @@ body {
   font-size: 18px;
 }
 
+.nav-list__item {
+  position: relative;
+}
+
+.nav-list__link {
+  transition: opacity 0.1s ease-in;
+}
+.nav-list__link:hover {
+  opacity: 0.8;
+}
+.nav-list__link-dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-list__link-dropdown::after {
+  content: url("/icons/arrow-up.svg");
+  height: 18px;
+}
+
 .cart {
   align-self: center;
   justify-self: end;
@@ -676,6 +696,25 @@ body {
   font-weight: 700;
   font-size: 20px;
   text-transform: capitalize;
+}
+
+.nav-list__sub-nav {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+}
+
+.sub-nav {
+  display: grid;
+  font-size: 16px;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: var(--footer-bg-color);
+  color: var(--header-text-color);
+}
+.sub-nav a {
+  color: var(--header-text-color);
 }
 
 /*# sourceMappingURL=style.css.map */
