@@ -197,9 +197,15 @@ body {
   font-weight: 500;
   font-size: 18px;
 }
+@media (max-width: 992px) {
+  .nav-list {
+    display: none;
+  }
+}
 
 .nav-list__item {
   position: relative;
+  padding-bottom: 10px;
 }
 
 .nav-list__link {
@@ -216,6 +222,23 @@ body {
 .nav-list__link-dropdown::after {
   content: url("/icons/arrow-up.svg");
   height: 18px;
+}
+
+.nav-list__sub-nav {
+  width: 160px;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translate(0, 50%);
+  transition: all 0.3s ease-in;
+}
+
+.nav-list__item:hover .nav-list__sub-nav {
+  pointer-events: all;
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .cart {
@@ -698,12 +721,6 @@ body {
   text-transform: capitalize;
 }
 
-.nav-list__sub-nav {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 10px);
-}
-
 .sub-nav {
   display: grid;
   font-size: 16px;
@@ -715,6 +732,10 @@ body {
 }
 .sub-nav a {
   color: var(--header-text-color);
+  transition: color 0.1s ease-in;
+}
+.sub-nav a:hover {
+  color: var(--acent);
 }
 
 /*# sourceMappingURL=style.css.map */
