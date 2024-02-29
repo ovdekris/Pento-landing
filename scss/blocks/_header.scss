@@ -26,6 +26,10 @@
   li{
     list-style-type: none;
   }
+
+  @include media-tablet(){
+    position: static;
+  }
 }
 
 .header__nav{
