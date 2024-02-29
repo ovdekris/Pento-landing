@@ -1,13 +1,14 @@
 const infoBtns=document.querySelectorAll(".info-dot");
 const infoHints=document.querySelectorAll(".info-hint");
 
-for (btn of infoBtns){
-    btn.addEventListener("click",showHint);
-}
+infoBtns.forEach(btn=>{
+    btn.addEventListener("click", showHint)
+});
 
 function showHint(e){
     e.stopPropagation();
-    this.parentNode.querySelector(".info-hint").classList.toggle("none");
+    const hint=this.parentNode.querySelector(".info-hint");
+    hint.classList.toggle("none");
     
 }
 
@@ -15,16 +16,16 @@ document.addEventListener("click", closeHint);
 
 function closeHint(e){
     e.stopPropagation();
-    for (let hint of infoHints){
+    infoHints.forEach(hint=>{
         hint.classList.add("none");
-    } 
-}
-
-for(let hint of infoHints){
-    hint.addEventListener("click", function (e){
-        e.stopPropagation();
     })
 }
+
+infoHints.forEach((hint=>{
+    hint.addEventListener("click",function (e){
+        e.stopPropagation();
+    })
+}));
 
 
 ///Swiper
@@ -82,3 +83,16 @@ for (let btn of tabsBtns){
         swiper.update();
     })
 }
+
+//Burger Menu
+const mobileNavOpen = document.querySelector("#nav-open");
+const mobileNavClose = document.querySelector(".mobile-mav-btn-close");
+const mobileNav = document.querySelector(".nav-mobile-wrapper");
+
+mobileNavOpen.addEventListener("click",()=>{
+    mobileNav.classList.add("nav-mobile-wrapper-open");
+});
+
+mobileNavClose.addEventListener("click",()=>{
+    mobileNav.classList.remove("nav-mobile-wrapper-open");
+})
