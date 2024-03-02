@@ -77,13 +77,18 @@ body {
   color: var(--text-color);
 }
 
+a {
+  text-decoration: none;
+  color: var(--footer-text-color);
+}
+
+li {
+  list-style-type: none;
+}
+
 html, body {
   font-family: var(--font-main);
   color: var(--text-color);
-}
-
-body {
-  padding-bottom: 50vh;
 }
 
 .container {
@@ -758,6 +763,7 @@ body {
 }
 
 .nav-mobile-wrapper {
+  z-index: 3;
   display: none;
   position: absolute;
   right: 0;
