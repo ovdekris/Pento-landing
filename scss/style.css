@@ -134,7 +134,7 @@ html, body {
 }
 
 .header__nav {
-  margin-bottom: 86px;
+  margin-bottom: clamp(28px, 0.989rem + 0.06vw, 86px);
 }
 
 .header__content {
@@ -144,14 +144,16 @@ html, body {
   opacity: 0.8;
   max-width: 606px;
   margin: 0 auto;
-  font-size: 24px;
+  font-size: clamp(16px, 0.989rem + 0.06vw, 24px);
   line-height: 160%;
+  text-wrap: normal;
 }
 
 .header__title {
   margin-bottom: 14px;
   font-weight: 700;
-  font-size: 80px;
+  text-wrap: normal;
+  font-size: clamp(28px, 1.676rem + 0.37vw, 80px);
   line-height: 130%;
   letter-spacing: -0.8px;
   text-transform: capitalize;
@@ -161,32 +163,30 @@ html, body {
   margin: 45px auto 0 auto;
 }
 
-.header__dot-sofa {
+.header__dot {
   max-width: 44px;
   position: absolute;
+}
+@media (max-width: 819px) {
+  .header__dot {
+    display: none;
+  }
+}
+.header__dot-sofa {
   left: 20.5555555556%;
   top: 63.1918819188%;
 }
-
 .header__dot-vase {
-  max-width: 44px;
-  position: absolute;
   left: 7.9166666667%;
   top: 69.557195572%;
   transform: translate(-50%, -50%);
 }
-
 .header__dot-item {
-  max-width: 44px;
-  position: absolute;
   left: 56.25%;
   top: 72.6014760148%;
   transform: translate(-50%, -50%);
 }
-
 .header__dot-wall {
-  max-width: 44px;
-  position: absolute;
   right: 3.1944444444%;
   top: 75.7380073801%;
 }
@@ -741,7 +741,7 @@ html, body {
   align-self: center;
   letter-spacing: 0.28px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(18px, 1.111rem + 0.07vw, 28px);
   text-transform: capitalize;
 }
 
