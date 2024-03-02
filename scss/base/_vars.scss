@@ -51,3 +51,9 @@ li{
     @content;
   }
 }
+
+@mixin mobile-s(){
+  @media (max-width: 629px) {
+    @content;
+  }
+}

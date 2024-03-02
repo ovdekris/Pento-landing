@@ -134,7 +134,7 @@ html, body {
 }
 
 .header__nav {
-  margin-bottom: clamp(28px, 0.989rem + 0.06vw, 86px);
+  margin-bottom: clamp(28px, 0.714rem + 5.18vw, 86px);
 }
 
 .header__content {
@@ -144,7 +144,7 @@ html, body {
   opacity: 0.8;
   max-width: 606px;
   margin: 0 auto;
-  font-size: clamp(16px, 0.989rem + 0.06vw, 24px);
+  font-size: clamp(16px, 0.857rem + 0.71vw, 24px);
   line-height: 160%;
   text-wrap: normal;
 }
@@ -153,7 +153,7 @@ html, body {
   margin-bottom: 14px;
   font-weight: 700;
   text-wrap: normal;
-  font-size: clamp(28px, 1.676rem + 0.37vw, 80px);
+  font-size: clamp(28px, 0.821rem + 4.64vw, 80px);
   line-height: 130%;
   letter-spacing: -0.8px;
   text-transform: capitalize;
@@ -298,6 +298,11 @@ html, body {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(4px);
 }
+@media (max-width: 819px) {
+  .search-form {
+    display: none;
+  }
+}
 
 .search-form__input {
   color: var(--header-text-color);
@@ -436,7 +441,7 @@ html, body {
 }
 
 .benefits {
-  padding: 120px 0;
+  padding: clamp(60px, 2.679rem + 5.36vw, 120px);
 }
 
 .benefits__grid {
@@ -444,9 +449,20 @@ html, body {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+@media (max-width: 992px) {
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(30px, 0.982rem + 4.46vw, 60px);
+  }
+}
+@media (max-width: 629px) {
+  .benefits__grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .benefits__title {
-  font-size: 42px;
+  font-size: clamp(32px, 1.702rem + 1.49vw, 42px);
   font-weight: 700;
   max-width: 260px;
 }
