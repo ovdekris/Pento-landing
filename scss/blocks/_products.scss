@@ -17,7 +17,13 @@
 }
 
 .products__slider{
-  margin-bottom: 60px;
+  margin-bottom: clamp(30px, 0.982rem + 4.46vw, 60px);
+  @include mobile-s(){
+    padding: 0 20px;
+  }
+  @include laptop(){
+    padding: 0 40px;
+  }
 }
 
 .products__link{

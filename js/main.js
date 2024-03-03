@@ -32,22 +32,21 @@ infoHints.forEach((hint=>{
 const swiper = new Swiper('.swiper', {
     freeMode: true,
     loop: true,
-    slidesPerView:4,
-    spaceBetween: 42,
-    // breakpoints:{
-    //     640:{
-    //         slidesPerView: 2,
-    //         spaceBetween: 20,
-    //     },
-    //     768:{
-    //         slidesPerView: 2,
-    //         spaceBetween: 20,
-    //     },
-    //     1024:{
-    //         slidesPerView: 2,
-    //         spaceBetween: 20,
-    //     },
-    // },
+    slidesPerView:1,
+    breakpoints:{
+        600:{
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        920:{
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        1230:{
+            slidesPerView: 4,
+            spaceBetween: 42
+        }
+        },
     navigation: {
         nextEl: '#sliderNext',
         prevEl: '#sliderPrev',
